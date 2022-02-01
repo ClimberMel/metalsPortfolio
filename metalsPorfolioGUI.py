@@ -14,6 +14,13 @@ root.title('Metals Portfolio')
 # Functions for calculations go here
 
 
+# Functions for file handling go here
+
+def add_purchase():
+    # pass purchace here
+    print('Purchace added')
+    # calculate new total for metal purchased
+
 
 # GUI components
 
@@ -65,13 +72,13 @@ for metal in metaltype:
         value=metal[1],
         variable=selected_metal)
     #rb_metal.pack(fill='x', padx=5, pady=5)
-    rb_metal.pack(padx=5, pady=15, side=tk.LEFT)
+    rb_metal.pack(fill='x', padx=5)
 
 # button
 button = ttk.Button(
     root,
     text="Add Purchase",
-    command=show_weightconv)
+    command=add_purchase)
 button.pack(fill='x', padx=5, pady=5)
 
 root.mainloop()
